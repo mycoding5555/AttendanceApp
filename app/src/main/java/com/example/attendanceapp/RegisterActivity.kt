@@ -1,5 +1,6 @@
 package com.example.attendanceapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.widget.TextView
 import android.os.Bundle
@@ -10,10 +11,17 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 
 class RegisterActivity : AppCompatActivity() {
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_register)
+        // get data from register
+        val name = findViewById<TextView>(R.id.name)
+        val email = findViewById<TextView>(R.id.email)
+        val password = findViewById<TextView>(R.id.password)
+        val btn_Register = findViewById<MaterialButton>(R.id.btnRegister)
+
 
 
         // Get references to the button

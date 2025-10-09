@@ -17,4 +17,9 @@
     <string name="email">email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="all_users">all_user</string>
+    <string name="all_students">all_students</string>
+    <string name="student_attendance">student_attendace</string>
+    <string name="calendar">calendar</string>
+    <string name="recent_activity">recent_activity</string>
 </resources>
