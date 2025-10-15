@@ -11,10 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import com.example.attendanceapp.R
 import com.example.attendanceapp.ViewModel.LoginState
 import com.example.attendanceapp.ViewModel.LoginViewModel
-import com.example.attendanceapp.AuthModels.User
 
 
 class LoginActivity : AppCompatActivity() {
@@ -23,18 +21,28 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login) // create a layout with ids below
+        setContentView(R.layout.activity_login)
 
         val emailInput = findViewById<EditText>(R.id.email)
         val passwordInput = findViewById<EditText>(R.id.password)
         val loginButton = findViewById<Button>(R.id.btnLogin)
         val statusText = findViewById<TextView>(R.id.sms_show)
         val progress = findViewById<ProgressBar>(R.id.progressBar)
+        // Assuming you have a button with the id 'btnGoToRegister' in your layout
+        val registerButton = findViewById<TextView>(R.id.goto_register_button)
+
 
         loginButton.setOnClickListener {
             val e = emailInput.text.toString().trim()
             val p = passwordInput.text.toString()
             viewModel.login(e, p)
+        }
+
+        // Set up the click listener for the register button
+        registerButton.setOnClickListener {
+            // Corrected variable name and placed inside the listener
+            val registerIntent = Intent(this, RegisterActivity::class.java)
+            startActivity(registerIntent)
         }
 
         lifecycleScope.launch {

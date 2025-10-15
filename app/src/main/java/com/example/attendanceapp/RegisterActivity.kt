@@ -1,5 +1,6 @@
 package com.example.attendanceapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -14,6 +15,7 @@ import java.io.IOException
 
 class RegisterActivity : AppCompatActivity() {
     // Removed @SuppressLint("WrongViewCast") as it's not needed with correct setup
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // enableEdgeToEdge() is commented out as it's not standard and might not be defined in your project.

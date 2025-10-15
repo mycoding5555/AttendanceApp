@@ -15,7 +15,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Attendance Dashboard"
+                app:title="Dashboard"
                 app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
         </com.google.android.material.appbar.AppBarLayout>

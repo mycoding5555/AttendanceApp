@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AttendanceApplication</string>
+    <string name="app_name">MyAttendance</string>
     <string name="register">Register</string>
     <string name="goto_login">you\'re have an account? Login</string>
     <string name="title_activity_dashboard">DashboardActivity</string>
